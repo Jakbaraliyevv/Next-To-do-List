@@ -11,18 +11,9 @@ function LoginComponents() {
   return (
     <section className="w-[90%] m-auto h-screen flex items-center justify-center flex-col gap-5">
       <div>
-        <h1 className="text-[25px]  font-bold tracking-widest">Register</h1>
+        <h1 className="text-[25px]  font-bold tracking-widest">Login</h1>
       </div>
       <form className="flex flex-col gap-5 w-[30%]">
-        <div className={styleInputDiv}>
-          <input
-            required
-            className={styleInput}
-            type="text"
-            placeholder="Full name"
-          />
-          <FaUser className="text-[19px]" />
-        </div>
         <div className={styleInputDiv}>
           <input
             className={styleInput}
@@ -31,16 +22,6 @@ function LoginComponents() {
             placeholder="Valid email"
           />
           <FaRegEnvelope className="text-[19px]" />
-        </div>
-
-        <div className={styleInputDiv}>
-          <input
-            className={styleInput}
-            required
-            type="text"
-            placeholder="Phone number"
-          />
-          <FaMobileAlt className="text-[19px]" />
         </div>
 
         <div className={styleInputDiv}>
