@@ -2,44 +2,34 @@ import Image from "next/image";
 import React from "react";
 import { Button } from "../ui/button";
 import { ModeToggle } from "../darcKmod";
-import { Input } from "../ui/input";
 import { Search } from "lucide-react";
 import Link from "next/link";
+import { Edit, Trash2 } from "lucide-react"; // Edit va Delete ikonkalari
 
+import { Checkbox } from "@/components/ui/checkbox";
 function HomeComponents() {
   return (
-    <section className="w-[40%] m-auto">
-      <div className="flex items-center justify-between py-4">
-        <div className="flex  flex-col items-center justify-center ">
-          <Image
-            className="rounded-[100%]"
-            src="/user1.jpg"
-            alt="this is image"
-            width={70}
-            height={70}
-          />
-          <h3>Jakbaraliyev29</h3>
+    <div className="flex flex-col gap-7 w-[80%] m-auto mt-5">
+      <div className="flex flex-col gap-[40px]">
+        <h2 className="text-[24px] font-bold">Today’s tasks</h2>
+        <div className="flex items-end justify-between border-[1px] gap-[1.5em] border-gray-500 p-5 rounded-lg">
+          <div className=" flex flex-col gap-3">
+            <div className="flex items-center gap-4">
+              <Checkbox className="w-[20px] h-[20px]" id="terms" />
+              <p className="text-[1.3em]">22:29</p>
+            </div>
+            <h4 className="text-justify text-[1.em]">Kitob oqish</h4>
+          </div>
+          <div className="flex flex-col gap-4">
+            <Edit className="cursor-pointer" />
+            <Trash2 className="cursor-pointer" />
+          </div>
         </div>
-        <div className="flex items-center gap-4">
-          <Link href={"/login"}>
-            <Button>Sing In</Button>
-          </Link>
-
-          <ModeToggle />
-        </div>
-      </div>
-
-      <div>
-        <div className="flex items-center w-full h-[40px] rounded-[20px] border border-gray-300 px-2 focus:border-blue-500 focus:ring focus:ring-blue-200 transition">
-          <Input
-            className=" w-full !border-none !outline-none"
-            type="search"
-            placeholder="Qidiruv..."
-          />
-          <Search className="  text-gray-400" />
-        </div>
-      </div>
-    </section>
+          </div>
+      <Button className="fixed w-[50px] text-[25px] h-[50px]  bottom-8 right-8 -translate-x-1/2 bg-blue-500 text-white rounded-full p-4 shadow-lg hover:bg-blue-600 focus:outline-none">
+        +
+      </Button>
+    </div>
   );
 }
 
