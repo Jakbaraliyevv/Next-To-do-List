@@ -1,7 +1,12 @@
+import HomeComponents from "@/components/home";
 import React from "react";
 
 function Home() {
-  return <div>home</div>;
+  return (
+    <div>
+      <HomeComponents />
+    </div>
+  );
 }
 
 export default Home;
